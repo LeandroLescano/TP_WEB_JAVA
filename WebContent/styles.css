@@ -8,15 +8,17 @@ body, .Formulario {
 p, a, h1, h2, td {
 	font-family: 'Roboto', sans-serif;
 }
-/*h1, h2, td, p {
-	color: white;
-}*/
 
 .tdDesc {
 	text-align: left;
-    max-width: 300px;
+    max-width: 500px;
+    min-width: 500px;
     overflow: hidden;
     text-overflow: ellipsis;
+}
+
+th {
+		vertical-align: middle !important;
 }
 
 tr {
@@ -70,28 +72,9 @@ td {
   color: white;
 }
 
-input[type=text], select {
-  padding: 12px 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  
-}
-
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
+.form-control {
+	display: inline !important;
+	margin: 0px 0px 10px 0px;
 }
 
 div, #Formulario {

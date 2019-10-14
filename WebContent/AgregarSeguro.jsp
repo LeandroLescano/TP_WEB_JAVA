@@ -27,18 +27,19 @@
 
 <div class="container body-content bg-light">
 <h2>Agregar seguros</h2>
-	  <form method="get" action="servletSeguro">
+	  <form id="FormAgregar" method="get" action="servletSeguro">
 		  <p>ID Seguro: </p> 
 		  <% SeguroNegocio negocioS = new SeguroNegocio(); 
 		     int nuevoID = 1;
 		  	 nuevoID = negocioS.nuevoID();	
 		  %>   
-		  <input type="text" required name="txtID" value="<%=nuevoID %>" readonly style="width: 50px; text-align:center;">
+		  <!--<input type="text" required name="txtID" value="<%=nuevoID %>" readonly style="width: 50px; text-align:center;"> SIN BOOTSTRAP-->
+		  <input type="text" required name="txtID" value="<%=nuevoID %>" readonly class="form-control" style="width: 50px; text-align:center;">
 		  <br>
-		  <p>Descripción:</p> <input type="text" name="txtDescripcion" value="" style="width: 500px;">
+		  <p>Descripción:</p> <input type="text" class="form-control" name="txtDescripcion" value="" style="width: 500px;">
 		  <br>
 		  <p>Tipo de seguro:</p> 
-		 		 	<select name="tipos" >
+		 		 	<select name="tipos" class="custom-select" style="width: 200px; margin-bottom: 10px;">
 		 		 	<% 
 		 		 	  TipoSeguroNegocio negocioT = new TipoSeguroNegocio();
 					   ArrayList<TipoSeguro> tipos = negocioT.listarSeguros();
@@ -49,11 +50,11 @@
 		 		 	%> 
 		 			 </select>
 		    <br>
-		  <p>Costo contratación: $</p>   <input type="text" onkeypress='return event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)' name="txtCostoContratacion" placeholder="1000.00">
+		  <p>Costo contratación: $</p>   <input type="text" class="form-control" onkeypress='return event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)' name="txtCostoContratacion" placeholder="1000.00" style="width: 150px;">
 		    <br>
-		  <p>Costo máximo asegurado: $</p>   <input type="text" onkeypress='return event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)' name="txtCostoAsegurado" placeholder="25000.00">
+		  <p>Costo máximo asegurado: $</p>   <input type="text" class="form-control" onkeypress='return event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)' name="txtCostoAsegurado" placeholder="25000.00" style="width: 150px;">
 		    <br>  <br>
-		  <input type="submit" value="Agregar" name="btnAgregar">
+		  <button class="btn btn-success" style="background-color: #4CAF50" type="submit" name="btnAgregar">Agregar</button>
 	  </form>
   </div>
 </body>

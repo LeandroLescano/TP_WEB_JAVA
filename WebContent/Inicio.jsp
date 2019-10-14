@@ -16,7 +16,7 @@
 </div>
 
 <div class="Formulario">
-<h1>Soy la página inicio</h1>
+<h1 style="color: white;">Soy la página inicio</h1>
 </div>
 
 

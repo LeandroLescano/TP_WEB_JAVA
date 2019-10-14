@@ -27,7 +27,7 @@
 <div class="container body-content bg-light">
 <h2>Listado de seguros</h2>
 <form method="post" action="servletSeguro">
-<div style="color: black; margin: 25px 10px 25px 0px; float: left;">Busqueda por tipo de Seguro:</div><select name="tipos" style="margin: 13px 10px 13px 0px;">
+<div style="color: black; margin: 15px 10px 25px 0px; float: left;">Busqueda por tipo de Seguro:</div><select name="tipos" class="custom-select" style="width: 200px; margin-top: 8px;">
 	 		 	<option value="0">Todos</option> 
 	 		 	<% 
 	 		 	  TipoSeguroNegocio negocioT = new TipoSeguroNegocio();
