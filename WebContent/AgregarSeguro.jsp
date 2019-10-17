@@ -33,8 +33,7 @@
 		     int nuevoID = 1;
 		  	 nuevoID = negocioS.nuevoID();	
 		  %>   
-		  <!--<input type="text" required name="txtID" value="<%=nuevoID %>" readonly style="width: 50px; text-align:center;"> SIN BOOTSTRAP-->
-		  <input type="text" required name="txtID" value="<%=nuevoID %>" readonly class="form-control" style="width: 50px; text-align:center;">
+		  <input type="text" name="txtID" value="<%=nuevoID %>" readonly class="form-control" style="width: 50px; text-align:center;" required />
 		  <br>
 		  <p>Descripción:</p> <input type="text" class="form-control" name="txtDescripcion" value="" style="width: 500px;">
 		  <br>
@@ -54,7 +53,7 @@
 		    <br>
 		  <p>Costo máximo asegurado: $</p>   <input type="text" class="form-control" onkeypress='return event.charCode == 46 || (event.charCode >= 48 && event.charCode <= 57)' name="txtCostoAsegurado" placeholder="25000.00" style="width: 150px;">
 		    <br>  <br>
-		  <button class="btn btn-success" style="background-color: #4CAF50" type="submit" name="btnAgregar">Agregar</button>
+		  <input class="btn btn-success" style="background-color: #4CAF50" type="submit" value="Agregar" name="btnAgregar">
 	  </form>
   </div>
 </body>

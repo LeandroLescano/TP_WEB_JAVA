@@ -39,6 +39,7 @@
 				   }	 		 	
 				   		%>
 	 			 </select>
+	 			 <input type="submit" class="btn btn-success" style="background-color: #4CAF50; margin-top: 8px;" value="Filtrar" name="btnActualizar" id="btnActualizar">
     <table id="Gridview" class="table table-hover">
         <thead class="thead-dark">
             <tr>
@@ -83,22 +84,22 @@
 			
         </tbody>
     </table>
-		<input type="submit" hidden name="btnActualizar" id="btnActualizar">
+		<!--<input type="submit" hidden name="btnActualizar" id="btnActualizar">-->
 	</form>
 </div>
 </body>
 
 
 <script type="text/javascript">
-	<%if(request.getAttribute("IDTipo") != null)
+	 <%if(request.getAttribute("IDTipo") != null)
 		{
  			int IDT = (int)request.getAttribute("IDTipo");%>
 			$('select').val(<%=IDT%>);
-		<%} 
+		<%}
 	%>
 	
-	$('select').on('change', function() {
-		$(btnActualizar).click();
- 	});
+	//$('select').on('change', function() {
+	//	$(btnActualizar).click();
+ 	//});
 </script>	
 </html>
